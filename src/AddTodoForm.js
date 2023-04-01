@@ -1,6 +1,6 @@
 import React from "react";
 
-function AddTodoForm(props) {
+function AddTodoForm({ onAddTodo }) {
   const [todoTitle, setTodoTitle] = React.useState("");
 
   const handleTitleChange = (event) => {
@@ -15,7 +15,7 @@ function AddTodoForm(props) {
       title: todoTitle,
       id: Date.now(),
     };
-    props.onAddTodo(newTodo);
+    onAddTodo(newTodo);
     setTodoTitle("");
   };
 
