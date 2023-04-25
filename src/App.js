@@ -5,11 +5,11 @@ import AddTodoForm from "./AddTodoForm";
 // Custom hook for semi-persistent state
 function useSemiPersistentState(key, initialState) {
   const [state, setState] = React.useState(
-    localStorage.getItem(key) || initialState
+    JSON.parse(localStorage.getItem(key)) || []
   );
 
   React.useEffect(() => {
-    localStorage.setItem(key, state);
+    localStorage.setItem(key, JSON.stringify(state));
   }, [key, state]);
 
   return [state, setState];
@@ -17,23 +17,20 @@ function useSemiPersistentState(key, initialState) {
 
 function App() {
   // Update to use custom hook useSemiPersistentState
-  const [todoList, setTodoList] = useSemiPersistentState(
-    "savedTodoList",
-    JSON.stringify([])
-  );
+  const [todoList, setTodoList] = useSemiPersistentState("savedTodoList", []);
 
   const addTodo = (newTodo) => {
-    setTodoList(JSON.stringify([...JSON.parse(todoList), newTodo]));
+    setTodoList([...todoList, newTodo]);
   };
 
   return (
-    <div>
+    <>
       <h1>Todo List</h1>
       <AddTodoForm onAddTodo={addTodo} />
       <hr />
-      <TodoList todoList={JSON.parse(todoList)} />
+      <TodoList todoList={todoList} />
       <hr />
-    </div>
+    </>
   );
 }
 
