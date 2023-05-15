@@ -1,4 +1,5 @@
 import React from "react";
+import InputWithLabel from "./InputWithLabel"; // Import the InputWithLabel component
 
 function AddTodoForm({ onAddTodo }) {
   const [todoTitle, setTodoTitle] = React.useState("");
@@ -21,10 +22,9 @@ function AddTodoForm({ onAddTodo }) {
 
   return (
     <form onSubmit={handleAddTodo}>
-      <label htmlFor="todoTitle">Title</label>
-      <input
-        id="todoTitle"
-        name="title"
+      {/* Use InputWithLabel component and pass necessary props */}
+      <InputWithLabel
+        label="Title" // Pass the label prop with value "Title"
         value={todoTitle}
         onChange={handleTitleChange}
       />
