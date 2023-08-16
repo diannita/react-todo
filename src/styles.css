@@ -4,7 +4,11 @@
 body {
   background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
   color: #66ff00;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Orbitron', sans-serif; /* Apply the Orbitron font */
+  font-weight: 700; /* Bold font weight */
+  text-transform: uppercase; /* Uppercase text */
+  letter-spacing: 1px; /* Letter spacing for a futuristic look */
+  transition: background-color 0.3s ease-in-out; /* Smooth transition */
   margin: 0;
   padding: 0;
   display: flex;
@@ -56,14 +60,19 @@ body {
 .todo-item button {
   background-color: #ff6600;
   border: none;
-  color: #111111;
+  color: #efeaea;
   padding: 5px 10px;
   border-radius: 5px;
   cursor: pointer;
+  font-family: 'Orbitron', sans-serif; /* Apply the Orbitron font */
+  font-weight: 700; /* Bold font weight */
+  text-transform: uppercase; /* Uppercase text */
+  letter-spacing: 1px; /* Letter spacing for a futuristic look */
+  transition: background-color 0.3s ease-in-out; /* Smooth transition */
 }
 
 .todo-item button:hover {
-  background-color: #ff9900;
+  background-color: #8A2BE2;
 }
 
 /* Add todo form */
@@ -82,18 +91,6 @@ body {
   margin-bottom: 10px;
 }
 
-.add-todo-button {
-  background-color: #ff6600;
-  border: none;
-  color: #111111;
-  padding: 8px 15px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.add-todo-button:hover {
-  background-color: #ff9900;
-}
 
 /* Responsive styles */
 @media screen and (max-width: 600px) {
@@ -117,3 +114,4 @@ body {
     margin-bottom: 8px;
   }
 }
+
