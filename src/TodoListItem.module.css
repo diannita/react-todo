@@ -1,0 +1,11 @@
+.ListItem {
+    color: #15588b;
+    padding-bottom: 25px;
+  } 
+.center {
+  text-align: center;
+}
+.button {
+  background-color: #8A2BE2;
+  color: white
+}

@@ -1,5 +1,7 @@
 import React from "react";
 import InputWithLabel from "./InputWithLabel"; // Import the InputWithLabel component
+import './styles.css';
+import styles from './TodoListItem.module.css';
 
 function AddTodoForm({ onAddTodo }) {
   const [todoTitle, setTodoTitle] = React.useState("");
@@ -21,14 +23,14 @@ function AddTodoForm({ onAddTodo }) {
   };
 
   return (
-    <form onSubmit={handleAddTodo}>
+    <form onSubmit={handleAddTodo} className="add-todo-form">
       {/* Use InputWithLabel component and pass necessary props */}
       <InputWithLabel
         label="Title" // Pass the label prop with value "Title"
         value={todoTitle}
         onChange={handleTitleChange}
       />
-      <button>Add</button>
+      <button className={styles.button}>Add to List</button>
     </form>
   );
 }
