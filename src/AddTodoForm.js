@@ -26,10 +26,11 @@ function AddTodoForm({ onAddTodo }) {
     <form onSubmit={handleAddTodo} className="add-todo-form">
       {/* Use InputWithLabel component and pass necessary props */}
       <InputWithLabel
-        label="Title" // Pass the label prop with value "Title"
         value={todoTitle}
         onChange={handleTitleChange}
-      />
+      >
+        Title
+      </InputWithLabel>
       <button className={styles.button}>Add to List</button>
     </form>
   );
