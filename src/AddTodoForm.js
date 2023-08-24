@@ -20,14 +20,17 @@ function AddTodoForm({ onAddTodo }) {
     setTodoTitle("");
   };
 
+  
+
   return (
     <form onSubmit={handleAddTodo}>
       {/* Use InputWithLabel component and pass necessary props */}
       <InputWithLabel
-        label="Title" // Pass the label prop with value "Title"
         value={todoTitle}
         onChange={handleTitleChange}
-      />
+      >
+        Title
+      </InputWithLabel>
       <button>Add</button>
     </form>
   );
