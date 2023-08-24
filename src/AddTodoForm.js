@@ -29,7 +29,7 @@ function AddTodoForm({ onAddTodo }) {
         value={todoTitle}
         onChange={handleTitleChange}
       >
-        Title
+        <h2 className= {styles.center}>TODO LIST APP</h2>
       </InputWithLabel>
       <button className={styles.button}>Add to List</button>
     </form>

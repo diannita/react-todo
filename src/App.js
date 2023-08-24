@@ -69,7 +69,6 @@ function App() {
       <Routes>
         <Route path="/" element={<>
           <h1>CYBERPUNK</h1>
-          <h2 className= {styles.center}>TODO LIST APP</h2>
           {isLoading ? (
             <p>Loading...</p>
           ) : (
