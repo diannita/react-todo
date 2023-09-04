@@ -1,0 +1,117 @@
+/* styles.css */
+
+/* Base styles */
+body {
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: #66ff00;
+  font-family: 'Orbitron', sans-serif; /* Apply the Orbitron font */
+  font-weight: 700; /* Bold font weight */
+  text-transform: uppercase; /* Uppercase text */
+  letter-spacing: 1px; /* Letter spacing for a futuristic look */
+  transition: background-color 0.3s ease-in-out; /* Smooth transition */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 800px;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  font-size: 36px;
+  margin: 0;
+}
+
+/* Todo list */
+.todo-list {
+  list-style: none;
+  padding: 0;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.todo-item span {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+.todo-item button {
+  background-color: #ff6600;
+  border: none;
+  color: #efeaea;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Orbitron', sans-serif; /* Apply the Orbitron font */
+  font-weight: 700; /* Bold font weight */
+  text-transform: uppercase; /* Uppercase text */
+  letter-spacing: 1px; /* Letter spacing for a futuristic look */
+  transition: background-color 0.3s ease-in-out; /* Smooth transition */
+}
+
+.todo-item button:hover {
+  background-color: #8A2BE2;
+}
+
+/* Add todo form */
+.add-todo-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.add-todo-input {
+  padding: 8px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #66ff00;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+
+/* Responsive styles */
+@media screen and (max-width: 600px) {
+  /* Adjust font sizes and padding for mobile */
+  .header h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .todo-item {
+    padding: 8px;
+    margin-bottom: 8px;
+  }
+
+  .add-todo-form {
+    margin-top: 10px;
+  }
+
+  .add-todo-input,
+  .add-todo-button {
+    margin-bottom: 8px;
+  }
+}
+
